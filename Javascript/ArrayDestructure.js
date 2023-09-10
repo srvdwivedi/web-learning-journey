@@ -20,7 +20,7 @@ const restaurant = {
       close: 23,
     },
     sat: {
-      open: 0, // Open 24 hours
+      open: 0,
       close: 24,
     },
   }
