@@ -6,8 +6,6 @@ const ItemList = () => {
     const { state } = useContext(ListContext);
     const { items, loading, error } = state;
 
-    console.log('items', items)
-
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
 

@@ -2,6 +2,8 @@ import { createContext, useReducer, useEffect } from "react";
 import { listReducer, initialState, ACTIONS } from './ListReducer'
 import fetchItems from "../api/apiUtils";
 
+const API_URL = 'https://jsonplaceholder.typicode.com/users'
+
 //create context 
 const ListContext = createContext()
 
@@ -12,7 +14,7 @@ const ListProvider = ({ children }) => {
     useEffect(()=>{
         const getItems = async ()=>{
             try{
-                const data = await fetchItems()
+                const data = await fetchItems(API_URL)
 
                 dispatch({ type: ACTIONS.FETCH_SUCCESS, payload: data})
 
